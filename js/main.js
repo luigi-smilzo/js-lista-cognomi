@@ -12,3 +12,14 @@ console.log(surnameList.sort());
 
 // Check the new array item position and print
 console.log(surnameList.indexOf('Smilzo'));
+
+var unorderedList = document.getElementById('unorderedList');
+
+
+for (var i = 0; i < surnameList.length; i++) {
+    var surname = surnameList[i];
+    
+    var previousItem = unorderedList.innerHTML;
+    var newItem = '<li>' + surname + '</li>';
+    unorderedList.innerHTML = previousItem + newItem;
+}
